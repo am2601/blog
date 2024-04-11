@@ -1,0 +1,7 @@
+title: Once Upon A Time in Programming
+baseurl: "/blog"
+url: "https://am2601.github.io"
+github_username:  am2601
+
+# Build settings
+markdown: kramdown
