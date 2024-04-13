@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 times Bug turns into a Feature in programming</title>
+    <link rel="icon" type="image/x-icon" href="./content/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 mx-auto w-full xl:w-2/5">
+    <div id="main-page-button" class="hidden sm:block fixed top-0 left-0 p-4">
+    <a href="/" class="text-center" title="Main Page">
+      <img src="/content/home button.png" alt="Main Page" class="w-10 h-auto">
+    </a>
+</div>
+
+    <div id="content" class="w-full pb-60 px-6 sm:px-0 text-lg">
+        <header class="py-10">
+            <h1 class="text-4xl font-bold">7 times Bug turns into a Feature in programming</h1>
+        </header>
+        <article class="text-start prose">
+            Bugs are unexpected behavior of software. They always appeared and even if you tested it multiple times some bugs can be
+            accidentally released into production. But sometimes things that are not intended to be made become so successful with
+            users that instead of fixing, developers decide to actually keep them in future versions.
+            <section class="pt-6">
+                <h2 class="text-2xl font-bold">Hidden files in Linux<h2>
+                <p class="pt-1">
+                    If you've ever worked on Linux systems, you're probably know, that files whose names start with dot - are called hidden
+                    and they don't show up in directory listing.
+<div class="text-sm sm:text-base bg-gray-800 text-white rounded-lg p-4 my-4">
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="o">&gt;</span> <span class="nb">ls</span> <span class="nt">-a</span>
+ .hidden_file</code></pre></figure>
+</div>
+                    Actually that was made by accident. Function that should hide reference to current and parent directories - was written
+                    to hide every file whose name starts with dot. Users discovered this feature and used it to hide files simply by naming
+                    them with dots in the beginning. A lot of applications relied on this logic, so developers decided to keep that new
+                    “feature”.
+                </p>
+            </section>
+            <section class="pt-6">
+                <h2 class="text-2xl font-bold">Gmail Undo email feature<h2>
+                <p class="pt-1">
+                    After clicking the send button in gmail you have some time to stop the operation. This is an example of a clever
+                    solution for a problem. Gmail has a 5 second delay when processing an email message. And developers turned this issue
+                    into a feature by implementing an undo option. The message processing service displays an "undo" button and lets you
+                    stop this email from being sent. That feature became so popular that other mail services implemented this as well.
+                </p>
+                <img class="text-center mx-auto" src="./content/bugs/images/gmail-undo.png" alt="Gmail undo email sending">
+            </section>
+            <section class="pt-6">
+                <h2 class="text-2xl font-bold">Fog in Silent Hill<h2>
+                <p class="pt-1">
+                    When Silent Hill first came out, game consoles weren’t powerful enough to render the whole town of Silent Hill. For
+                    improving performance, the game rendered only close to player objects.
+                    <br>
+                    The problem was that it created the unwanted effect of buildings and trees just popping into existence as the player
+                    walked in their direction. The developers solved this problem by covering the whole town in a thick fog hiding areas
+                    beyond the player’s vision.
+                    <br>
+                    In later versions of the game, consoles got much better graphic cards, and this “trick” became unnecessary, but by that
+                    time the fog became such an integral part of Silent Hill that the developers had no choice but to leave it in.
+                </p>
+                <img class="text-center mx-auto h-96 py-4" src="./content/bugs/images/silent-hill-fog.png" alt="Fog in game Silent Hill">
+            </section>
+            <section class="pt-6">
+                <h2 class="text-2xl font-bold">Windows Ctrl+Alt+Delete<h2>
+                <p class="pt-1">
+                    If you are using Windows you probably know about the Ctrl-Alt-Delete shortcut that gives quick access to important
+                    system operations like rebooting the system and task manager. That trick can be used when some applications freeze and
+                    can’t be closed in the proper way.
+                    This keyword is not entirely a bug, it works as expected, but it is never meant to be in production. Firstly it was used
+                    only by programmers during the development process and they simply forgot to remove it in release. Now this is a well
+                    known solution to lags on Windows.
+                </p>
+                <img class="text-center mx-auto h-96 py-4" src="./content/bugs/images/windows.png" alt="Fog in game Silent Hill">
+            </section>
+            <section class="pt-6">
+                <h2 class="text-2xl font-bold">Busty Lara Croft<h2>
+                <p class="pt-1">
+                    While making Lara Croft’s girlish figure for the game Tomb Raider, the designer had a slip of his mouse which turned an
+                    intended 50 percent increase to her breast size into a 150 percent gain.
+                    Other team members were watching him do this and before he could press Ctrl + Z, there was instant approval from the
+                    team to keep it.
+                </p>
+                <img class="text-center mx-auto h-96 py-4" src="./content/bugs/images/lara-croft.webp" alt="Lara Croft from Tomb Raider game">
+            </section>
+            <section class="pt-6">
+                <h2 class="text-2xl font-bold">Space Invaders enemies increasing speed<h2>
+                <p class="pt-1">
+                    Space Invaders was one of the first popular arcade games. You’re supposed to shout enemies coming from top of the
+                    screen. When you shout more and more enemies their speed increases, making the game harder. But it wasn’t meant to be.
+                    Speed of enemies was supposed to be constant, but computers at the time didn’t have enough resources to run this game
+                    properly and slow enemies were caused by lack of performance. As you killed more and more enemies, the memory was freed
+                    and the game started running at the correct speed.
+                </p>
+                <img class="text-center mx-auto h-96 py-4" src="./content/bugs/images/space-invaders.png" alt="Screenshot from Space Invaders game">
+            </section>
+            <section class="pt-6">
+                <h2 class="text-2xl font-bold">Civilization angry Gandhi<h2>
+                <p class="pt-1">
+                    In game Civilization were different leaders controlled by computers. Gandhi was meant to be the most peaceful leader.
+                    Aggression was defined as integer, where Gandhi had lowest - 0 points. One of the game mechanics reduced aggression by
+                    one point after accepting democracy. And it is supposed to make all leaders less aggressive, but not with Gandhi. His
+                    aggression instead of setting to -1 actually set to the highest possible value 255 because of integer overflow. And it
+                    makes Gandhi way more aggressive than any other leader in the game and he starts to attack other civilizations with
+                    nuclear weapons.
+                </p>
+                <img class="text-center mx-auto h-96 py-4" src="./content/bugs/images/nuclear-gundhi.jpg" alt="Nuclear Gandhi meme">
+            </section>
+        </article>
+    </div>
+</body>
+</html>
