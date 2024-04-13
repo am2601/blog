@@ -1,5 +1,5 @@
 ---
-permalink: /bugs-turns-into-feature/
+permalink: /bugs-turned-into-features
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +12,7 @@ permalink: /bugs-turns-into-feature/
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 mx-auto w-full xl:w-2/5">
+    {% include main-page-button.html %}
     <div id="content" class="w-full pb-60 px-6 sm:px-0 text-lg">
         <header class="py-10">
             <h1 class="text-4xl font-bold">7 times Bug turns into a Feature in programming</h1>
@@ -25,6 +26,12 @@ permalink: /bugs-turns-into-feature/
                 <p class="pt-1">
                     If you've ever worked on Linux systems, you're probably know, that files whose names start with dot - are called hidden
                     and they don't show up in directory listing.
+<div class="text-sm sm:text-base bg-gray-800 text-white rounded-lg p-4 my-4">
+{% highlight shell %}
+> ls -a
+ .hidden_file
+{% endhighlight %}
+</div>
                     Actually that was made by accident. Function that should hide reference to current and parent directories - was written
                     to hide every file whose name starts with dot. Users discovered this feature and used it to hide files simply by naming
                     them with dots in the beginning. A lot of applications relied on this logic, so developers decided to keep that new
@@ -39,6 +46,7 @@ permalink: /bugs-turns-into-feature/
                     into a feature by implementing an undo option. The message processing service displays an "undo" button and lets you
                     stop this email from being sent. That feature became so popular that other mail services implemented this as well.
                 </p>
+                <img class="text-center mx-auto" src="./content/bugs/images/gmail-undo.png" alt="Gmail undo email sending">
             </section>
             <section class="pt-6">
                 <h2 class="text-2xl font-bold">Fog in Silent Hill<h2>
@@ -53,6 +61,7 @@ permalink: /bugs-turns-into-feature/
                     In later versions of the game, consoles got much better graphic cards, and this “trick” became unnecessary, but by that
                     time the fog became such an integral part of Silent Hill that the developers had no choice but to leave it in.
                 </p>
+                <img class="text-center mx-auto h-96 py-4" src="./content/bugs/images/silent-hill-fog.png" alt="Fog in game Silent Hill">
             </section>
             <section class="pt-6">
                 <h2 class="text-2xl font-bold">Windows Ctrl+Alt+Delete<h2>
@@ -64,6 +73,7 @@ permalink: /bugs-turns-into-feature/
                     only by programmers during the development process and they simply forgot to remove it in release. Now this is a well
                     known solution to lags on Windows.
                 </p>
+                <img class="text-center mx-auto h-96 py-4" src="./content/bugs/images/windows.png" alt="Fog in game Silent Hill">
             </section>
             <section class="pt-6">
                 <h2 class="text-2xl font-bold">Busty Lara Croft<h2>
@@ -73,6 +83,7 @@ permalink: /bugs-turns-into-feature/
                     Other team members were watching him do this and before he could press Ctrl + Z, there was instant approval from the
                     team to keep it.
                 </p>
+                <img class="text-center mx-auto h-96 py-4" src="./content/bugs/images/lara-croft.webp" alt="Lara Croft from Tomb Raider game">
             </section>
             <section class="pt-6">
                 <h2 class="text-2xl font-bold">Space Invaders enemies increasing speed<h2>
@@ -83,6 +94,7 @@ permalink: /bugs-turns-into-feature/
                     properly and slow enemies were caused by lack of performance. As you killed more and more enemies, the memory was freed
                     and the game started running at the correct speed.
                 </p>
+                <img class="text-center mx-auto h-96 py-4" src="./content/bugs/images/space-invaders.png" alt="Screenshot from Space Invaders game">
             </section>
             <section class="pt-6">
                 <h2 class="text-2xl font-bold">Civilization angry Gandhi<h2>
@@ -94,6 +106,7 @@ permalink: /bugs-turns-into-feature/
                     makes Gandhi way more aggressive than any other leader in the game and he starts to attack other civilizations with
                     nuclear weapons.
                 </p>
+                <img class="text-center mx-auto h-96 py-4" src="./content/bugs/images/nuclear-gundhi.jpg" alt="Nuclear Gandhi meme">
             </section>
         </article>
     </div>
