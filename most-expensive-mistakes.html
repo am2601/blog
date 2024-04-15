@@ -15,9 +15,9 @@ permalink: /most-expensive-mistakes
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 w-full">
-    <div id="content" class="mx-auto w-full xl:w-2/5 pb-10 text-lg px-2 sm:px-0">
-        {% include main-page-button.html %}
-        <header class="py-10">
+    {% include header.html %}
+    <div id="content" class="mx-auto pt-20 w-full xl:w-2/5 pb-10 text-lg px-2 sm:px-0">
+        <header class="pb-10">
             <h1 class="text-4xl font-bold">5 Most Expensive Mistakes in Programming</h1>
         </header>
         <article class="text-start prose">
@@ -32,7 +32,7 @@ permalink: /most-expensive-mistakes
                     It was supposed to deliver payloads into orbit.
                     The Ariane 5 was reusing old software from Ariane 4. While converting data and storing them in variables, horizontal
                     acceleration went higher than the system could process and the computers crashed. It was unprotected because Ariane 4
-                    couldn't possibly manage to reach values that high. The rocket went off its path, and eventually was self-destructed 37
+                    couldn't possibly manage to reach values that high. The rocket went off its 96path, and eventually was self-destructed 37
                     seconds after launch.
                     The failure resulted in a loss of more than $370 million dollars.
                 </p>
