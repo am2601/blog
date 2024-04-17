@@ -1,0 +1,104 @@
+---
+permalink: /y2k-bug
+layout: default
+title: What is Year 2000 problem (or Y2K bug)
+description: Y2K bug is on of the most famous and most expensive bugs in history of computers and programming. This article summarizes the causes, solutions and consequences of this problem.
+keywords: bug, y2k, year 2000, millenium, problem
+---
+<header class="pb-10">
+    <img class="h-56 sm:h-96 w-auto" src="/content/y2k-bug/main.png" alt="Y2K bug">
+    <h1 class="text-4xl font-bold pt-6">What is Year 2000 problem (or Y2K bug)</h1>
+</header>
+<p>
+    <a href="https://jcmit.net/memoryprice.htm" title="Table with historical memory prices">In 1980 megabyte of memory would cost you around $6000, which sounds very expensive now. But 10 years earlier in
+        1970 it would cost around $700000.</a><br>
+    That’s why programmers back there put a lot of effort into trying to consume
+    less memory in their softwares.
+    This causes one of the most famous and potentially dangerous computer bugs in
+    history - Y2K problem or year 2000 problem or millennium bug.<br>Most programs in the 20th century for saving memory used
+    only 2 last digits for representing a year and simply added '19' before. Which made all these programs unable to
+    distinguish the year 2000 from the year 1900.
+    <img class="text-center mx-auto h-80 sm:h-96 py-6" src="/content/most-expensive-mistakes/y2k-bug.webp" alt="Y2K bug example in Windows system" title="Y2K bug example in Windows system">
+</p>
+<section class="pt-10">
+    <h2 class="text-2xl font-bold">Risks and potential damage<h2>
+    <p class="pt-3">
+        In the late nineties, as the problem became popular, various theories began to appear around it. People imagined a lot
+        of stuff like the fall of the world finance system, or even worse nuclear apocalypse because of errors in military
+        nuclear software. These talks raised quite a panic in society and people bought and stockpiled weapons, medicine and
+        food, preparing for worst-case scenarios.
+    </p>
+</section>
+<section class="pt-10">
+    <h2 class="text-2xl font-bold">Panic around the problem<h2>
+    <p class="pt-3">
+        Y2K bug potentially may cause unpredictable errors and unstables in programs which worked with dates. Since at this time
+        a lot of processes in important fields like military, government, finance and medicine were related on computer’s -
+        people were seriously afraid that it could cause real problems up to the apocalypse.
+    </p>
+    <div class="flex justify-center pt-4">
+        <img class="text-center mx-auto h-72 sm:h-96 py-6" src="/content/y2k-bug/panic.jpg" alt="Magazine covers with articles about Y2K bug" title="Magazine covers with articles about Y2K bug">
+    </div>
+</section>
+<section class="pt-10">
+    <h2 class="text-2xl font-bold">Solving the problem<h2>
+    <p class="pt-3">
+        First person who spoke publicly about the issue was Bob Bemer in 1958. Then different people in different fields noticed
+        the issue and even put effort into fixing it, but most of the work was done only in the last 3 years before 2000.
+        Private companies and governments worldwide participate in fixing errors and minimize potential damage. Around 500
+        billions of dollars were spent on fixing this issue and consequences of it.
+        To prevent this issue it was recommended to use unix time format that stores dates as number of seconds since 1 january
+        1970.
+        <h3 class="text-xl font-bold pt-6">How people fixed Y2K bug in old systems?</h3>
+        <p class="pt-3">
+            But for fixing old systems that already stored years with 2 digits were used several different approaches:
+            <ul class="list-disc pl-8">
+                <li>Adding 2 more digits to date - this method requires a lot of work, testing and additional storage.</li>
+                <li>Program use century only when it’s needed - this was a lot easier and mostly required only a little patch for code.</li>
+                <li>Converting dates to integers instead of storing them as day, month and year.</li>
+                <li>In the old database, the old date which was stored as 2 digits for day, 2 for month and 2 for year can be converted into
+                3 digits for year (starts with 0 for 20th century and starts with 1 for 21 century) and 3 digits for day of year. It
+                allows keeping the size of the database without changes.</li>
+            </ul>
+        </p>
+    </p>
+</section>
+<section class="pt-10">
+    <h2 class="text-2xl font-bold">Real impact of problem<h2>
+    <p class="pt-3">
+        In conclusion, damage was minimal even in countries that didn’t invest into fixing the problem. A lot of errors were
+        documented, but all of them were far from critical. Mostly it was issues with ticket machines or terminals, but all
+        cases were short and quickly fixed.
+        So in reality Y2K wasn’t that bad and in most cases it was more about panic than about real danger.
+    </p>
+    <img class="text-center mx-auto h-80 sm:h-96 py-6" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Bug_de_l%27an_2000.jpg"
+        alt="Example of Y2K bug impact in real world" title="Example of Y2K bug impact in real world">
+</section>
+<section class="pt-10">
+    <h2 class="text-2xl font-bold">Profit for industry<h2>
+    <p class="pt-3">
+        The Y2K bug had not only bad consequences, programmers worldwide were facing problem and cooperating to solve it. At
+        this time the best practices for software development started rising. People wanted to gather knowledge together and
+        help other developers build better systems and avoid global errors like this. Also the process of fixing this bug showed
+        how important are software testing and code review and this practices become standart after that.
+    </p>
+</section>
+<section class="pt-10">
+    <h2 class="text-2xl font-bold">Similar problems<h2>
+    <p class="pt-3">
+        The Y2K issue is the most well-known, but not the only similar problem.
+    </p>
+    <h3 class="text-xl font-bold pt-6">Year 2038 problem</h3>
+    <p class="pt-1">
+        One of the most popular formats of representing dates now is unix time - it stores the number of seconds from 1 january
+        1970 on 32 bits. And the problem here is the max number that you can store in 32 bits is 2<sup>31</sup> - 1 or 2,147,483,647. And this is 03:14:07 19 January 2038. After that value, the system will try to increase
+        the counter - it will cause integer overflow which as result will change the number to -2<sup>31</sup> which represents 1901 year.
+    </p>
+    <h3 class="text-xl font-bold pt-6">Y10K problem</h3>
+    <p class="pt-1">
+        Now for storing a year using only 4 digits, but when the year 10000 will come it won’t be enough anymore. This problem
+        is far from now, but some people already noticed it, for example in Microsoft excel.
+    </p>
+</section>
+
+<iframe class="mt-10 sm:mt-20 h-56 sm:h-96 w-full px-2 sm:px-20" src="https://www.youtube.com/embed/HCjpCwwT8Fc" title="Y2K computer bug" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
